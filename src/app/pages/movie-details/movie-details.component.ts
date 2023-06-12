@@ -47,7 +47,7 @@ export class MovieDetailsComponent implements OnInit {
 
   getVideo(id:any)
   {
-    this.service.getMovieVideo(id).subscribe((result)=>{
+    this.service.getMovieVideo(id).subscribe((result : any)=>{
         console.log(result,'getMovieVideo#');
         result.results.forEach((element:any) => {
             if(element.type=="Trailer")
@@ -61,7 +61,7 @@ export class MovieDetailsComponent implements OnInit {
 
   getMovieCast(id:any)
   {
-    this.service.getMovieCast(id).subscribe((result)=>{
+    this.service.getMovieCast(id).subscribe((result: any)=>{
       console.log(result,'movieCast#');
       this.getMovieCastResult = result.cast;
     });
